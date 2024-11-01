@@ -1,0 +1,34 @@
+.map-field-section {
+    max-width: 100%;
+}
+
+.map-field-section label,
+.map-field-section input {
+	width: 100%;
+}
+
+.map-field-section label {
+    display: block;
+    margin-top: 3px;
+}
+
+.map-field-section input {
+    margin-bottom: 3px;
+}
+
+.map-field-section input.api-key {
+    margin-bottom: 0;
+}
+
+.map-field-section #api-notice {
+    margin: 0;
+    font-size: 14px;
+}
+
+.map-field-section textarea {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 3px;
+    resize: none;
+    overflow: auto;
+}

@@ -1,0 +1,15 @@
+image: php:7.1.29
+
+pipelines:
+  branches:
+    master:
+      - step:
+          script:
+            - apt-get update
+            - apt-get install -y subversion
+            - svn co https://plugins.svn.wordpress.org/simple-google-maps-widget/trunk/
+            - mv trunk/.svn ./.svn
+            - rm -rf trunk
+            - svn add --force ./*
+            - svn ci -m 'update plugin' --username $WP_USERNAME --password $WP_PASSWORD
+            - svn update
